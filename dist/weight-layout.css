@@ -1,0 +1,9 @@
+.growth-line { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 1000px) {
+  .growth-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .growth-line { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .growth-line .track { display: none; }
+  .growth-line .milestone { margin-top: 0; text-align: left; }
+}
