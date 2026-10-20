@@ -1,4 +1,4 @@
-.growth-line { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.growth-line { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 @media (max-width: 1000px) {
   .growth-grid { grid-template-columns: 1fr; }
 }
