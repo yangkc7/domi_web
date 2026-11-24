@@ -1,0 +1,17 @@
+.hello-row { display: flex; justify-content: space-between; align-items: center; }
+.paw { font-size: 38rpx; }
+.name { color: #4f7088; font-size: 72rpx; margin-top: 5rpx; }
+.heart { color: #d4a58d; font-weight: 400; }
+.intro { display: block; color: #687582; margin-top: 26rpx; font-size: 27rpx; line-height: 1.9; }
+.hero-photo { margin-top: 34rpx; padding: 12rpx; background: #fff; border-radius: 160rpx 160rpx 28rpx 28rpx; }
+.hero-photo image { border-radius: 150rpx 150rpx 20rpx 20rpx; }
+.photo-caption { display: flex; justify-content: space-between; padding: 16rpx 8rpx; font-size: 21rpx; color: #687582; letter-spacing: 1rpx; }
+.facts { display: flex; margin: 28rpx 0; }
+.facts > view { flex: 1; border-left: 2rpx solid #c7d5dc; padding-left: 22rpx; }
+.fact-label, .fact-value { display: block; }
+.fact-label { font-size: 22rpx; color: #687582; }
+.fact-value { font-size: 28rpx; font-weight: 600; margin-top: 5rpx; }
+.together { background: #dbe8ee; border: 0; display: flex; flex-direction: column; }
+.number { color: #4f7088; font-size: 40rpx; font-weight: 700; padding: 0 8rpx; }
+.recent { margin-top: 16rpx; }
+.recent-title { display: block; font-size: 30rpx; font-weight: 600; margin: 10rpx 0 4rpx; }

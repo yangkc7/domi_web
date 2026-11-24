@@ -1,0 +1,9 @@
+<view class="page tab-page">
+  <text class="eyebrow">EVERYDAY MOMENTS</text><view class="title"><view>平凡日子里的</view><view>小小幸福</view></view>
+  <text class="subtitle">小猫的幸福很简单 ♡</text>
+  <view wx:for="{{moments}}" wx:key="id" class="moment section">
+    <view class="photo-frame"><image class="photo" src="{{item.photo}}" mode="widthFix" data-src="{{item.photo}}" bind:tap="preview" lazy-load="{{true}}" show-menu-by-longpress="{{true}}" /></view>
+    <view class="moment-body"><text class="moment-number">日常 · 0{{index + 1}}</text><text class="quote">“{{item.title}}。”</text><text class="muted block">{{item.description}}</text></view>
+  </view>
+  <view class="footer">按下快门，收藏生活里的温柔。</view>
+</view>

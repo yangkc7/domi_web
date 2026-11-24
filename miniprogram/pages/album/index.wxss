@@ -1,0 +1,7 @@
+.album-page { padding-top: 16rpx; padding-left: 16rpx; padding-right: 16rpx; }
+.album { display: flex; flex-wrap: wrap; align-items: flex-start; }
+.photo-card { box-sizing: border-box; width: 50%; padding: 8rpx; }
+.photo-card image { border-radius: 16rpx; }
+@media (min-width: 430px) {
+  .photo-card { width: 33.333333%; }
+}

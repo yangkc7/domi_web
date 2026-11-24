@@ -1,0 +1,9 @@
+.form { padding-top: 8rpx; }
+.field-label { display: block; font-size: 26rpx; font-weight: 600; margin: 26rpx 0 14rpx; }
+.field { display: block; width: 100%; background: #f6f7f4; color: #253341; border-radius: 14rpx; font-size: 28rpx; padding: 20rpx; height: 86rpx; }
+.picker { display: flex; justify-content: space-between; align-items: center; }
+.picker .muted { font-size: 23rpx; }
+.description { height: 250rpx; line-height: 1.7; }
+.hint { display: block; color: #687582; font-size: 23rpx; margin-top: 14rpx; }
+.cancel { background: transparent; color: #687582; margin-top: 16rpx; padding: 20rpx; }
+.storage-note { color: #82909a; font-size: 23rpx; line-height: 1.8; margin-top: 26rpx; padding: 0 10rpx; }

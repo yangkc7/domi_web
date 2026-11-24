@@ -1,0 +1,15 @@
+<view class="page tab-page">
+  <text class="eyebrow">MEMORY LANE</text><text class="title">把第一次，记下来。</text>
+  <text class="subtitle">从来到世界，到走进我们的生活。</text>
+  <view class="filters"><button class="chip {{filter === '全部' ? 'active' : ''}}" data-filter="全部" bind:tap="filter">全部事件</button><button class="chip {{filter === '健康' ? 'active' : ''}}" data-filter="健康" bind:tap="filter">健康档案</button></view>
+  <view wx:if="{{error}}" class="error-note">{{error}}</view>
+  <view class="timeline">
+    <view wx:for="{{filtered}}" wx:key="id" class="event {{item.category === '健康' ? 'health' : ''}}" data-id="{{item.id}}" data-custom="{{item.custom}}" bind:longpress="remove">
+      <view class="date-row"><text>{{item.date}}</text><text class="tag">{{item.category}}</text></view>
+      <text class="event-title">{{item.title}}</text><text class="description">{{item.description}}</text>
+      <view wx:if="{{item.photo}}" class="photo-frame event-photo"><image class="photo" src="{{item.photo}}" mode="widthFix" data-src="{{item.photo}}" bind:tap="preview" lazy-load="{{true}}" show-menu-by-longpress="{{true}}" /></view>
+      <text wx:if="{{item.custom}}" class="local-label">本机新增 · 长按卡片可删除</text>
+    </view>
+  </view>
+  <view wx:if="{{!filtered.length}}" class="card muted">暂无这类记录。</view>
+</view>

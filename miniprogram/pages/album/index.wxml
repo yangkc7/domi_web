@@ -1,0 +1,7 @@
+<view class="page tab-page album-page">
+  <view class="album">
+    <view wx:for="{{photos}}" wx:key="id" class="photo-card">
+      <image class="photo" src="{{item.photo}}" mode="widthFix" data-src="{{item.photo}}" bind:tap="preview" lazy-load="{{true}}" show-menu-by-longpress="{{true}}" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="tab-bar">
+  <view class="tab-row">
+    <button wx:for="{{tabs}}" wx:key="pagePath" class="tab-button {{selected === index ? 'selected' : ''}}" data-index="{{index}}" bind:tap="switchTab" hover-class="tab-pressed" aria-label="{{item.text}}">{{item.text}}</button>
+  </view>
+</view>

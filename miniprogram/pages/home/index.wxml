@@ -1,0 +1,23 @@
+<view class="page tab-page home">
+  <view class="hello-row"><text class="eyebrow">DOMI'S LITTLE WORLD</text><text class="paw">🐾</text></view>
+  <text class="title">你好，我是</text>
+  <text class="title name">哆咪 Domi<text class="heart"> ♡</text></text>
+  <text class="intro">{{profile.introduction}}</text>
+  <view class="hero-photo">
+    <image class="photo" src="{{profile.portrait}}" mode="widthFix" data-src="{{profile.portrait}}" bind:tap="preview" show-menu-by-longpress="{{true}}" />
+  </view>
+  <view class="photo-caption"><text>小小探险家 · 哆咪</text><text>2026 / 07 / 14</text></view>
+  <view class="facts">
+    <view><text class="fact-label">生日</text><text class="fact-value">7 月 14 日</text></view>
+    <view><text class="fact-label">到家日</text><text class="fact-value">9 月 5 日</text></view>
+    <view><text class="fact-label">最新体重</text><text class="fact-value">{{latestWeight}} kg</text></view>
+  </view>
+  <view class="together card"><text>来到世界的第 <text class="number">{{age}}</text> 天</text><text class="muted small">已经陪伴彼此 {{homeDays}} 天</text></view>
+  <view wx:if="{{error}}" class="error-note">{{error}}</view>
+  <view class="page-actions"><button class="primary" bind:tap="goEvents">翻开成长日记 ↓</button><button class="secondary" bind:tap="goGrowth">看看成长</button></view>
+  <view class="section">
+    <view class="section-head"><text class="section-title">最近的小事</text><button class="text-button" bind:tap="goEvents">全部事件 →</button></view>
+    <view class="recent card" wx:for="{{recent}}" wx:key="id"><text class="tag">{{item.category}}</text><text class="recent-title">{{item.title}}</text><text class="muted small">{{item.date}}</text></view>
+  </view>
+  <view class="footer">哆咪的故事还在继续 ♡</view>
+</view>

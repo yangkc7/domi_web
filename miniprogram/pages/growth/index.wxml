@@ -1,0 +1,32 @@
+<view class="page tab-page">
+  <text class="eyebrow">GROWING UP</text><text class="title">一点一点，长大。</text>
+  <text class="subtitle">每一点变化，都是值得珍藏的足迹。</text>
+  <view wx:if="{{error}}" class="error-note">{{error}}</view>
+  <view wx:if="{{latest}}" class="weight-hero section">
+    <text class="small">{{latest.date}} · 最新记录</text>
+    <view class="weight-number">{{latest.value}}<text> kg</text></view>
+    <text class="small">{{latest.change}}</text>
+  </view>
+  <view wx:if="{{chart.length}}" class="section card">
+    <text class="section-title">成长的刻度</text><text class="block muted small">最近 {{chart.length}} 次称重 · 单位 kg</text>
+    <view class="chart" aria-label="最近八次称重折线图，横轴按真实时间间隔排列">
+      <view class="chart-guide guide-top"></view><view class="chart-guide guide-middle"></view><view class="chart-guide guide-bottom"></view>
+      <view wx:for="{{chartSegments}}" wx:key="id" class="chart-line" style="left: {{item.x}}rpx; top: {{item.y}}rpx; width: {{item.length}}rpx; transform: translateY(-50%) rotate({{item.angle}}deg);"></view>
+      <block wx:for="{{chart}}" wx:key="id">
+        <text class="chart-value" style="left: {{item.x}}rpx; top: {{item.labelY}}rpx;">{{item.value}}</text>
+        <view class="chart-dot {{index === chart.length - 1 ? 'dot-latest' : ''}}" style="left: {{item.x}}rpx; top: {{item.y}}rpx;"></view>
+      </block>
+      <block wx:for="{{chartTicks}}" wx:key="date">
+        <view class="chart-tick" style="left: {{item.x}}rpx;"></view>
+        <text class="chart-date" style="left: {{item.x}}rpx;">{{item.label}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-head"><text class="section-title">体重手账</text><text class="muted small">共 {{count}} 次</text></view>
+    <view wx:for="{{rows}}" wx:key="id" class="record card" data-id="{{item.id}}" data-custom="{{item.custom}}" bind:longpress="remove">
+      <view><text class="block record-date">{{item.date}}</text><text class="muted small">{{item.change}}</text><text wx:if="{{item.custom}}" class="local-label">本机新增 · 长按可删除</text></view>
+      <view class="record-value">{{item.value}}<text> kg</text></view>
+    </view>
+  </view>
+</view>

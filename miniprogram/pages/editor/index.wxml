@@ -1,0 +1,22 @@
+<view class="page editor">
+  <text class="eyebrow">A LITTLE NOTE FOR DOMI</text>
+  <text class="title">{{type === 'weight' ? '今天长大了吗？' : '今天发生了什么？'}}</text>
+  <text class="subtitle">把哆咪的变化，留在日记里。</text>
+  <view class="card section form">
+    <text class="field-label">记录日期</text>
+    <picker mode="date" value="{{date}}" start="{{minDate}}" end="{{maxDate}}" bind:change="dateChange"><view class="field picker">{{date}}<text class="muted">选择日期 ›</text></view></picker>
+    <block wx:if="{{type === 'weight'}}">
+      <text class="field-label">体重 / kg</text><input class="field" type="digit" value="{{kg}}" placeholder="例如 2.15" maxlength="5" data-field="kg" bind:input="input" />
+      <text class="hint">最多保留两位小数，每天保存一条体重记录。</text>
+    </block>
+    <block wx:else>
+      <text class="field-label">事件分类</text><picker range="{{categories}}" value="{{categoryIndex}}" bind:change="categoryChange"><view class="field picker">{{categories[categoryIndex]}}<text class="muted">选择分类 ›</text></view></picker>
+      <text class="field-label">事件名称</text><input class="field" value="{{title}}" maxlength="40" placeholder="例如：第一次剪指甲" data-field="title" bind:input="input" />
+      <text class="field-label">留下一点细节 <text class="muted small">（可选）</text></text><textarea class="field description" value="{{description}}" maxlength="500" placeholder="记下这个值得收藏的瞬间……" data-field="description" bind:input="input" />
+    </block>
+  </view>
+  <text wx:if="{{error}}" class="block error-note">{{error}}</text>
+  <view class="page-actions"><button class="primary" bind:tap="save" loading="{{saving}}" disabled="{{saving}}">保存这条记录</button></view>
+  <button class="cancel" bind:tap="cancel" disabled="{{saving}}">暂时不记</button>
+  <view class="storage-note">新增记录保存在当前微信的本机缓存中。清理缓存、删除小程序或更换设备后可能丢失；不会自动同步到网站或他人的微信。</view>
+</view>

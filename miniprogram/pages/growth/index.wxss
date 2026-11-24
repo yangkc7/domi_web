@@ -1,0 +1,20 @@
+.weight-hero { background: #4f7088; border-radius: 32rpx; padding: 36rpx; color: #fff; }
+.weight-hero > text { opacity: .85; }
+.weight-number { font-size: 112rpx; line-height: 1.35; }
+.weight-number text { font-size: 34rpx; }
+.chart { position: relative; width: 560rpx; height: 304rpx; margin: 28rpx auto 0; }
+.chart-guide { position: absolute; left: 32rpx; right: 32rpx; height: 1rpx; background: #e5e9eb; }
+.guide-top { top: 50rpx; }
+.guide-middle { top: 140rpx; }
+.guide-bottom { top: 230rpx; }
+.chart-line { position: absolute; height: 4rpx; background: #7894a8; transform-origin: left center; border-radius: 2rpx; }
+.chart-value { position: absolute; transform: translateX(-50%); font-size: 20rpx; font-weight: 600; color: #4f7088; white-space: nowrap; }
+.chart-dot { position: absolute; width: 15rpx; height: 15rpx; box-sizing: border-box; border: 3rpx solid #fff; border-radius: 50%; background: #4f7088; transform: translate(-50%, -50%); }
+.dot-latest { width: 19rpx; height: 19rpx; background: #eabca5; box-shadow: 0 0 0 3rpx #f6e4d9; }
+.chart-date { position: absolute; top: 250rpx; transform: translateX(-50%); font-size: 20rpx; color: #687582; white-space: nowrap; }
+.chart-tick { position: absolute; top: 230rpx; width: 1rpx; height: 8rpx; background: #c7d5dc; }
+.record { display: flex; align-items: center; justify-content: space-between; gap: 20rpx; margin-bottom: 16rpx; }
+.record-date { font-size: 28rpx; font-weight: 600; }
+.record-value { font-size: 38rpx; color: #4f7088; white-space: nowrap; }
+.record-value text { font-size: 23rpx; }
+.local-label { display: block; color: #8b715f; font-size: 20rpx; margin-top: 8rpx; }

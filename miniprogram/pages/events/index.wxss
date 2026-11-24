@@ -1,0 +1,12 @@
+.filters { display: flex; gap: 16rpx; margin: 30rpx 0; }
+.chip { border-radius: 40rpx; background: #ebece7; color: #687582; font-size: 25rpx; padding: 13rpx 27rpx; }
+.chip.active { color: #fff; background: #4f7088; }
+.timeline { padding-left: 28rpx; border-left: 2rpx solid #c7d5dc; margin-left: 10rpx; }
+.event { position: relative; background: #fff; border-radius: 26rpx; padding: 26rpx; margin-bottom: 28rpx; }
+.event::before { content: ""; position: absolute; left: -40rpx; top: 38rpx; width: 16rpx; height: 16rpx; border-radius: 50%; background: #4f7088; border: 3rpx solid #f8f5ee; }
+.health { background: #f6e4d9; }
+.date-row { display: flex; justify-content: space-between; align-items: center; color: #687582; font-size: 23rpx; }
+.event-title { display: block; font-size: 34rpx; font-weight: 600; margin: 16rpx 0 10rpx; overflow-wrap: break-word; }
+.description { display: block; color: #687582; font-size: 26rpx; white-space: pre-wrap; overflow-wrap: break-word; }
+.event-photo { margin-top: 24rpx; }
+.local-label { display: block; margin-top: 18rpx; font-size: 21rpx; color: #8b715f; }

@@ -1,0 +1,7 @@
+# WeChat developer-tool settings for this computer
+**/project.private.config.json
+**/node_modules/
+**/__pycache__/
+
+# Temporary publishing checkout
+.publish-worktree/

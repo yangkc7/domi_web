@@ -1,0 +1,7 @@
+.tab-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000; background: #fffaf1; border-top: 1rpx solid #e3e7e5; box-shadow: 0 -6rpx 26rpx rgba(37, 51, 65, .06); padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); }
+.tab-row { display: flex; justify-content: space-between; align-items: center; gap: 36rpx; padding: 18rpx 32rpx; }
+.tab-button { display: flex; flex: 0 0 100rpx; align-items: center; justify-content: center; box-sizing: border-box; min-width: 0; width: 100rpx; height: 100rpx; margin: 0; padding: 0; border: 2rpx solid #d2dce2; border-radius: 10rpx; background: #edf3f5; color: #4f7088; font-size: 32rpx; font-weight: 600; line-height: 1; }
+.tab-button::after { border: 0; }
+.tab-button { font-family: "DomiCute", "YouYuan", "PingFang SC", sans-serif; }
+.tab-button.selected { color: #fff; background: #4f7088; border-color: #4f7088; }
+.tab-pressed { opacity: .75; }
